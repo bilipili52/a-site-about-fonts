@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шесть основных категорий шрифтов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Oswald:wght@400;700&family=Pacifico&family=Special+Elite&family=Orbitron:wght@400;700&family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Базовые стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Заголовки */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 30px 0 15px;
+            color: #2575fc;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 20px 0 10px;
+            color: #6a11cb;
+        }
+        
+        /* Навигация */
+        nav {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #2575fc;
+            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #f0f7ff;
+        }
+        
+        /* Основной контент */
+        .intro {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .font-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .category {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category h3 {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+        }
+        
+        .category-icon {
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+        
+        .font-example {
+            font-size: 2.5rem;
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .characteristics {
+            margin-top: 15px;
+        }
+        
+        .characteristics ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .characteristics li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .characteristics li:before {
+            content: "•";
+            color: #2575fc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Подвал */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .font-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+        }
+        
+        /* Специфические стили для каждого шрифта */
+        .serif-text {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .sans-serif-text {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .slab-serif-text {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 400;
+        }
+        
+        .script-text {
+            font-family: 'Comic Sans MS', cursive;
+        }
+        
+        .decorative-text {
+            font-family: 'Pacifico', cursive;
+        }
+        
+        .monospace-text {
+            font-family: 'Inconsolata', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Шесть основных категорий шрифтов</h1>
+            <p class="sans-serif-text">Изучите разнообразие типографики и её применение</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#serif">Антиква</a></li>
+                <li><a href="#sans-serif">Гротеск</a></li>
+                <li><a href="#slab-serif">Брусковая антиква</a></li>
+                <li><a href="#script">Рукописные</a></li>
+                <li><a href="#decorative">Декоративные</a></li>
+                <li><a href="#monospace">Моноширинные</a></li>
+            </ul>
+        </nav>
+        
+        <section class="intro">
+            <h2 class="sans-serif-text">О типографике</h2>
+            <p class="sans-serif-text">Типографика — это искусство оформления текста с помощью шрифтов. Правильный выбор шрифта может значительно повлиять на восприятие информации, создать нужное настроение и улучшить читаемость. В веб-дизайне и полиграфии принято выделять шесть основных категорий шрифтов, каждая из которых имеет свои особенности и области применения.</p>
+        </section>
+        
+        <section class="font-categories">
+            <!-- Антиква (Serif) -->
+            <div class="category" id="serif">
+                <h3><span class="category-icon">🖋️</span> <span class="serif-text">Антиква (Serif)</span></h3>
+                <div class="font-example serif-text">
+                    Playfair Display
+                </div>
+                <p class="serif-text">Шрифты с засечками — небольшими штрихами на концах основных штрихов букв. Антиква считается классическим, традиционным стилем.</p>
+                <div class="characteristics">
+                    <h4 class="serif-text">Характеристики:</h4>
+                    <ul>
+                        <li class="serif-text">Наличие засечек на концах штрихов</li>
+                        <li class="serif-text">Хорошая читаемость в печатных изданиях</li>
+                        <li class="serif-text">Ассоциируется с традиционностью, надежностью</li>
+                        <li class="serif-text">Часто используется в книгах, газетах, официальных документах</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Гротеск (Sans-serif) -->
+            <div class="category" id="sans-serif">
+                <h3><span class="category-icon">✒️</span> <span class="sans-serif-text">Гротеск (Sans-serif)</span></h3>
+                <div class="font-example sans-serif-text">
+                    Roboto
+                </div>
+                <p class="sans-serif-text">Шрифты без засечек. Современные, чистые и минималистичные, они широко используются в цифровой среде.</p>
+                <div class="characteristics">
+                    <h4 class="sans-serif-text">Характеристики:</h4>
+                    <ul>
+                        <li class="sans-serif-text">Отсутствие засечек</li>
+                        <li class="sans-serif-text">Чистый, современный вид</li>
+                        <li class="sans-serif-text">Хорошая читаемость на экранах</li>
+                        <li class="sans-serif-text">Ассоциируется с современностью, минимализмом</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Брусковая антиква (Slab Serif) -->
+            <div class="category" id="slab-serif">
+                <h3><span class="category-icon">🪨</span> <span class="slab-serif-text">Брусковая антиква (Slab Serif)</span></h3>
+                <div class="font-example slab-serif-text">
+                    Oswald
+                </div>
+                <p class="slab-serif-text">Шрифты с массивными, прямоугольными засечками. Выглядят прочно, устойчиво и привлекают внимание.</p>
+                <div class="characteristics">
+                    <h4 class="slab-serif-text">Характеристики:</h4>
+                    <ul>
+                        <li class="slab-serif-text">Толстые, блочные засечки</li>
+                        <li class="slab-serif-text">Высокая контрастность и заметность</li>
+                        <li class="slab-serif-text">Ассоциируются с прочностью, индустриальностью</li>
+                        <li class="slab-serif-text">Часто используются в заголовках, логотипах, рекламе</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Рукописные (Script) -->
+            <div class="category" id="script">
+                <h3><span class="category-icon">✍️</span> <span class="script-text">Рукописные (Script)</span></h3>
+                <div class="font-example script-text">
+                    Comic Sans MS
+                </div>
+                <p class="script-text">Шрифты, имитирующие рукописный текст. Могут быть формальными или неформальными, элегантными или casual.</p>
+                <div class="characteristics">
+                    <h4 class="script-text">Характеристики:</h4>
+                    <ul>
+                        <li class="script-text">Имитация рукописного письма</li>
+                        <li class="script-text">Часто имеют соединительные штрихи между буквами</li>
+                        <li class="script-text">Создают ощущение индивидуальности, творчества</li>
+                        <li class="script-text">Используются для приглашений, логотипов, акцентов</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Декоративные (Display) -->
+            <div class="category" id="decorative">
+                <h3><span class="category-icon">🎨</span> <span class="decorative-text">Декоративные (Display)</span></h3>
+                <div class="font-example decorative-text">
+                    Pacifico
+                </div>
+                <p class="decorative-text">Художественные, выразительные шрифты, предназначенные в первую очередь для привлечения внимания.</p>
+                <div class="characteristics">
+                    <h4 class="decorative-text">Характеристики:</h4>
+                    <ul>
+                        <li class="decorative-text">Высокая выразительность, уникальность</li>
+                        <li class="decorative-text">Часто имеют необычные формы и детали</li>
+                        <li class="decorative-text">Низкая читаемость в больших объемах текста</li>
+                        <li class="decorative-text">Используются для заголовков, логотипов, акцентов</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Моноширинные (Monospace) -->
+            <div class="category" id="monospace">
+                <h3><span class="category-icon">⌨️</span> <span class="monospace-text">Моноширинные (Monospace)</span></h3>
+                <div class="font-example monospace-text">
+                    Inconsolata
+                </div>
+                <p class="monospace-text">Шрифты, в которых все символы имеют одинаковую ширину. Изначально использовались в пишущих машинках.</p>
+                <div class="characteristics">
+                    <h4 class="monospace-text">Характеристики:</h4>
+                    <ul>
+                        <li class="monospace-text">Все символы имеют одинаковую ширину</li>
+                        <li class="monospace-text">Ассоциируются с технологиями, кодом</li>
+                        <li class="monospace-text">Используются в программировании, терминалах</li>
+                        <li class="monospace-text">Создают ощущение техничности, точности</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p class="sans-serif-text">© 2025 Сайт о типографике. Изучайте искусство шрифтов с нами!</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
